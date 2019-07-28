@@ -1,0 +1,28 @@
+<!-- <h3 color="secondary " mat-dialog-title>{{ dialogTitle }}</h3> -->
+<mat-toolbar color="warn">
+  <span>{{ dialogTitle }}</span>
+</mat-toolbar>
+<mat-dialog-content>
+  <app-search [(searchModel)]="searchModel"></app-search>
+  <mat-list role="">
+    <!-- <mat-list-item role="listitem" *ngFor="let x of pageData | filterAll: searchModel "> -->
+
+    <mat-list-item role="listitem" *ngFor="let x of this.sourceData.fillData | filterAll: searchModel 
+    | paginate: { itemsPerPage: 5, currentPage: page } ">
+      <mat-radio-button color="primary" [checked]="defSelectedOne !== undefined && 
+      x.id === defSelectedOne.id" [value]="x.id" (change)="selectThis($event.value)">
+        <div *ngIf="isProjectSearch">{{x.projectName}}</div>
+        <div *ngIf="!isProjectSearch">{{x.fullName}}</div>
+      </mat-radio-button>
+    </mat-list-item>
+  </mat-list>
+  <pagination-controls previousLabel="" nextLabel="" (pageChange)="page = $event"></pagination-controls>
+
+  <!-- <mat-paginator [length]="dispListData.length" [pageSize]="size" [pageIndex]="page" [pageSizeOptions]="[5, 10, 15]"
+    (page)="getData($event)">
+  </mat-paginator> -->
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button color="primary" (click)="selectThis(0)">Dismiss</button>
+</mat-dialog-actions>

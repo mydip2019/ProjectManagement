@@ -1,0 +1,98 @@
+<div layout="row" layout-align="space-between center" flex class="layout-align-space-between-center layout-row flex">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="{{'TASK_PG.SEARCH_TASKS' | translate}}">
+  </mat-form-field>&nbsp;&nbsp;
+
+  <!-- <button class="btn-secondary" mat-mini-fab matTooltip="Add a Task">
+        <mat-icon (click)="loadAddTask();" aria-label="add Task">add</mat-icon> Add Task
+    </button> -->
+
+
+  <button mat-raised-button color="accent" (click)="createComponent('Add',0)">
+    <mat-icon aria-label="add task">work_outline</mat-icon>{{'TASK_PG.ADD_TASK' | translate}}
+  </button>
+</div>
+
+<div class="basic-container mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort matSortActive="id" matSortDirection="desc" matSortDisableClear>
+
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>ID</th>
+      <td mat-cell *matCellDef="let task">{{ task.id }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="taskName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{'TASK_PG.NAME' | translate}} </th>
+      <td mat-cell *matCellDef="let task">{{ task.taskName }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="parentTaskId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{'TASK_PG.PARENT_TASK' | translate}} </th>
+      <td mat-cell *matCellDef="let task">{{ task.parentTaskId !== null ? task.parentTaskId :'No Parent'}}</td>
+    </ng-container>
+
+
+    <!-- Work Type Column -->
+    <ng-container matColumnDef="priority">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{'TASK_PG.PRIORITY' | translate}} </th>
+      <td mat-cell *matCellDef="let task">{{ task.priority }}</td>
+    </ng-container>
+
+    <!-- State Column -->
+    <ng-container matColumnDef="startDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{'TASK_PG.STARTDATE' | translate}}</th>
+      <td mat-cell *matCellDef="let task">{{ task.startDate | formatDateText: 28: 'MM-dd-yyyy' }}</td>
+    </ng-container>
+
+    <!-- State Column -->
+    <ng-container matColumnDef="endDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{'TASK_PG.ENDDATE' | translate}}</th>
+      <td mat-cell *matCellDef="let task">{{ task.endDate | formatDateText: 28: 'MM-dd-yyyy' }}</td>
+    </ng-container>
+
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+      <td mat-cell *matCellDef="let task">
+        <button mat-icon-button color="accent" matTooltip="{{'TASK_PG.EDIT_TASK' | translate}}">
+          <mat-icon (click)="editTask(task.id)" aria-label="edit task">edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" matTooltip="{{'TASK_PG.DELETE_TASK' | translate}}">
+          <mat-icon (click)="deleteTask(task)" aria-label="delete task">delete_forever</mat-icon>
+        </button>
+        <button *ngIf="task.status > 0" mat-icon-button color="warn" matTooltip="suspended task">
+          <mat-icon aria-label="suspended task">block</mat-icon>
+        </button>
+        <button *ngIf="task.status == 0" mat-icon-button color="warn" matTooltip="suspend task">
+          <mat-icon (click)="endTask(task.id)" aria-label="suspend task">play_arrow</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10]" showFirstLastButtons></mat-paginator>
+</div>
+<br />
+
+
+<div layout="row" [hidden]="hideAddTask" layout-align="space-between center" flex
+  class="layout-align-space-between-center layout-row flex">
+  <button mat-mini-fab color="accent" (click)="closeClick()" class="button-right">
+    <mat-icon class="mat-24">close</mat-icon>
+  </button>
+  <div class="basic-container mat-elevation-z8">
+
+    <mat-card class="z-depth center" flex="90">
+
+      <template #taskContainer (sentTaskEvent)="receiveSuccess($event)"></template>
+
+    </mat-card>
+  </div>
+</div>

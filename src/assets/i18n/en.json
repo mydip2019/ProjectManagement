@@ -1,0 +1,121 @@
+{
+    "Main": {
+        "WelcomeMsg": "Welcome to Angular Project Managment Application"
+    },
+    "HOME": {
+        "TITLE": "Hello Angular with ngx-translate!",
+        "SELECT": "Change language",
+        "HELLO": "Testing Language",
+        "HELLO3": "hello {{value}}"
+    },
+    "CONTACT": {
+        "GETCONTACTMSG": "fetched contacts",
+        "FEATCHCONTACTBYID": "fetched contact id ==>> {{id}}",
+        "ADD_CONTACT_MSG": "Added Contact id ==>> {{id}}",
+        "UPDATE_CONTACT_MSG": "Updated Contact id ==>> {{id}}",
+        "DELTE_CONTACT_MSG": " deleted Contact id ==>>{{id}}",
+        "SEARCHCONTACTS": "Search Contacts",
+        "ADDUSER": "Add User",
+        "CONFIRMTITLE": "Are you sure ?",
+        "NAME": "Name",
+        "EDITCONTACT": "edit contact",
+        "DELETECONTACT": "delete contact"
+    },
+    "PAGINATOR": {
+        "ITEMS_PER_PAGE": "Items per page",
+        "NEXT_PAGE": "Next page",
+        "PREV_PAGE": "Previous page",
+        "FIRST_PAGE": "First page",
+        "LAST_PAGE": "Last page"
+    },
+    "ADDUSERPG": {
+        "ADD_USER": "Add User",
+        "PERSONAL": "Personal",
+        "REVIEW": "Review",
+        "FIRST_NAME": "First Name",
+        "LAST_NAME": "Last Name",
+        "FULL_NAME": "Full Name",
+        "EMAIL_ADDRESS": "Email Address",
+        "SAVE": "Save"
+    },
+    "EDITUSER_PG": {
+        "PERSONAL": "Personal",
+        "TITLE": "Edit User",
+        "SAVE": "Save",
+        "CLOSE": "Close"
+    },
+    "STEPPERS": {
+        "NEXT": "Next",
+        "PREIVIOUS": "Previous",
+        "NEXT_PAGE": "Next Page",
+        "REVIEW_TITLE": "Here is the copy of the information you have entered:"
+    },
+    "PROJECT": {
+        "GETPROJECTMSG": "fetched projects",
+        "FEATCHPROJECTBYID": "fetched project id ==>> {{id}}",
+        "SEARCHPROJECTS": "Search Project",
+        "ADDPROJECTMSG": "Added Project id ==>> {{id}}",
+        "UPDATEPROJECTMSG": "Updated Project id ==>> {{id}}",
+        "DELTEPROJECTMSG": " deleted project id ==>>{{id}}",
+        "CONFIRMTITLE": "Are you sure ?",
+        "ADDPROJECT": "Add Project",
+        "NAME": "Name",
+        "PROJECTNAME": "Project Name",
+        "EDITPROJECT": "edit project",
+        "DELETEPROJECT": "delete project",
+        "PROJECTMANAGER": "Project Manager",
+        "STARTDATE": "Start Date",
+        "ENDDATE": "End Date",
+        "PRIORITY": "Priority"
+    },
+    "ADDEDITPROJECTPG": {
+        "TITLE": "{{value}} Project",
+        "PROJECTINFO": "Project Information",
+        "PROJECTNAME": "Project Name",
+        "REVIEW": "Review Project Information",
+        "PROJECTMANAGER": "Project Manager",
+        "STARTDATE": "Start Date",
+        "ENDDATE": "End Date",
+        "PRIORITY": "Priority",
+        "SAVE": "Save",
+        "ISDATE": "Is Date set ?"
+    },
+    "CONFIRMATION_PG": {
+        "YES": "YES",
+        "NO": "No"
+    },
+    "TASK_PG": {
+        "GET_TASKS_MSG": "fetched task",
+        "FEATCH_TASK_BY_ID": "fetched task id ==>> {{id}}",
+        "SEARCH_TASKS": "Search Task",
+        "END_TASK": "End Task",
+        "ADD_TASK_MSG": "Added Task id ==>> {{id}}",
+        "UPDATE_TASK_MSG": "Updated Task id ==>> {{id}}",
+        "DELTE_TASK_MSG": " deleted task id ==>>{{id}}",
+        "END_TASK_MSG": " End Task id ==>>{{id}}",
+        "CONFIRMTITLE": "Are you sure ?",
+        "ADD_TASK": "Add Task",
+        "PARENT_TASK": "Parent Task",
+        "NAME": "Name",
+        "PROJECT_NAME": "Task Name",
+        "EDIT_TASK": "edit task",
+        "DELETE_TASK": "delete task",
+        "TASK_USER": "Task User",
+        "STARTDATE": "Start Date",
+        "ENDDATE": "End Date",
+        "PRIORITY": "Priority"
+    },
+    "ADD_EDIT_TASK_PG": {
+        "TITLE": "{{value}} Task",
+        "TASK_INFO": "Task Information",
+        "TASK_NAME": "Task Name",
+        "PROJECT": "Project",
+        "REVIEW": "Review Task Information",
+        "TASK_USER": "Task User",
+        "STARTDATE": "Start Date",
+        "ENDDATE": "End Date",
+        "PRIORITY": "Priority",
+        "SAVE": "Save",
+        "ISPARENT": "Is Parent task ?"
+    }
+}

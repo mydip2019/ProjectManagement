@@ -1,0 +1,56 @@
+<mat-toolbar class="header-toolbar mat-elevation-z6">
+    <button class="sidenav-toggle" aria-label="Toggle Sidebar" (click)="toggleSidenav()">
+        <mat-icon class="menu-icon" aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <div class="all-menu">
+        <a [routerLink]="''">
+            <img alt="angular" class="docs-angular-logo" src="../../../assets/img/angular-white-transparent.svg">
+            <span class="app-title">Angular Project Management - By Dipesh Parekh</span>
+        </a>
+    </div>
+
+    <div class="desktop-menu">
+        <span class="spacer"></span>
+        <a rel="noopener" mat-button class="menu-item" [routerLink]="['/Home']">Home</a>
+        <a rel="noopener" mat-button class="menu-item" [routerLink]="['/Contacts']">Contacts</a>
+        <a rel="noopener" mat-button class="menu-item" [routerLink]="['/Projects']">Projects</a>
+        <a rel="noopener" mat-button class="menu-item" [routerLink]="['/Task']">Task</a>
+
+        <a *ngFor="let menu_item of menu; let i = index" [href]="[menu_item.url]" rel="noopener" mat-button
+            class="menu-item">{{ menu_item.name }}</a>
+
+        <!-- <button #btnEnglish mat-icon-button color="" (click)="switchLanguage('en')" aria-label="English">
+            <mat-icon>language</mat-icon>EN
+        </button><span class="mg10"></span>
+
+        <button #btnFrench mat-icon-button color="" (click)="switchLanguage('fr')" aria-label="French">
+            <mat-icon>language</mat-icon>FR
+        </button> -->
+        <div class="menu-item">
+            English<mat-slide-toggle [(ngModel)]="isFrench" (change)="changed()"><span class="menu-item">French</span>
+            </mat-slide-toggle>
+        </div>
+
+
+
+
+        <!-- <span>
+            <button mat-icon-button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+
+            <mat-menu #menu="matMenu">
+                <ul>
+                    <li>
+                        EN
+                    </li>
+                    <li>
+                        FR
+                    </li>
+                </ul>
+
+            </mat-menu>
+
+        </span> -->
+    </div>
+</mat-toolbar>

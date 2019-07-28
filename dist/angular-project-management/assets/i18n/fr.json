@@ -1,0 +1,121 @@
+{
+    "Main": {
+        "WelcomeMsg": "Bienvenue dans l'application Angular Project Managment"
+    },
+    "HOME": {
+        "TITLE": "Bonjour Angular avec ngx-translate !",
+        "SELECT": "Changer la langue",
+        "HELLO": "TESTING 2LANGU",
+        "HELLO3": "hello00000 {{value}}"
+    },
+    "CONTACT": {
+        "GETCONTACTMSG": "contacts recherchés",
+        "FEATCHCONTACTBYID": "contact récupéré id ==>> {{id}}",
+        "SEARCHCONTACTS": "Rechercher des contacts",
+        "ADD_CONTACT_MSG": "Identifiant de contact ajouté ==>> {{id}}",
+        "UPDATE_CONTACT_MSG": "Identifiant de contact mis à jour ==>> {{id}}",
+        "DELTE_CONTACT_MSG": "ID de contact supprimé ==>>{{id}}",
+        "CONFIRMTITLE": "Êtes-vous sûr?",
+        "ADDUSER": "Ajouter un utilisateur",
+        "NAME": "prénom",
+        "EDITCONTACT": "Modifier le contact",
+        "DELETECONTACT": "supprimer le contact"
+    },
+    "PAGINATOR": {
+        "ITEMS_PER_PAGE": "objets par page",
+        "NEXT_PAGE": "Page suivante",
+        "PREV_PAGE": "Page précédente",
+        "FIRST_PAGE": "Première page",
+        "LAST_PAGE": "Dernière page"
+    },
+    "ADDUSERPG": {
+        "ADD_USER": "Ajouter un utilisateur",
+        "PERSONAL": "Personnelle",
+        "REVIEW": "La revue",
+        "FIRST_NAME": "Prénom",
+        "FULL_NAME": "Nom complet",
+        "LAST_NAME": "Nom de famille",
+        "EMAIL_ADDRESS": "Adresse électronique",
+        "SAVE": "sauvegarder"
+    },
+    "EDITUSER_PG": {
+        "PERSONAL": "Personal",
+        "TITLE": "Modifier l'utilisateur",
+        "SAVE": "sauvegarder",
+        "CLOSE": "Fermer"
+    },
+    "STEPPERS": {
+        "NEXT": "SUIVANT",
+        "PREIVIOUS": "Précédente",
+        "NEXT_PAGE": "Page suivante",
+        "REVIEW_TITLE": "Voici la copie des informations que vous avez entrées:"
+    },
+    "PROJECT": {
+        "GETPROJECTMSG": "projets récupérés",
+        "FEATCHPROJECTBYID": "ID de projet récupéré ==>> {{id}}",
+        "SEARCHPROJECTS": "Projet de recherche",
+        "ADDPROJECT": "Ajouter un projet",
+        "ADDPROJECTMSG": "Ajoutered projet ==>> {{id}}",
+        "DELTEPROJECTMSG": " ID de projet supprimé ==>>{{id}}",
+        "CONFIRMTITLE": "Êtes-vous sûr?",
+        "UPDATEPROJECTMSG": "Identifiant de projet mis à jour ==>> {{id}}",
+        "NAME": "prénom",
+        "PROJECTNAME": "projet prénom",
+        "EDITPROJECT": "éditer le projet",
+        "DELETEPROJECT": "supprimer le projet",
+        "PROJECTMANAGER": "Chef de projet",
+        "STARTDATE": "Date de début",
+        "ENDDATE": "Date de fin",
+        "PRIORITY": "Priorité"
+    },
+    "ADDEDITPROJECTPG": {
+        "TITLE": "{{value}} projet",
+        "PROJECTINFO": "Renseignements sur le projet",
+        "PROJECTNAME": "projet prénom",
+        "REVIEW": "Examiner les informations du projet",
+        "PROJECTMANAGER": "Chef de projet",
+        "STARTDATE": "Date de début",
+        "ENDDATE": "Date de fin",
+        "PRIORITY": "Priorité",
+        "SAVE": "sauvegarder",
+        "ISDATE": "La date est-elle réglée?"
+    },
+    "CONFIRMATION_PG": {
+        "YES": "Oui",
+        "NO": "Non"
+    },
+    "TASK_PG": {
+        "GET_TASKS_MSG": "tâche récupérée",
+        "FEATCH_TASK_BY_ID": "Identifiant de tâche récupéré ==>> {{id}}",
+        "SEARCH_TASKS": "Tâche de recherche",
+        "END_TASK": "Tâche finale",
+        "ADD_TASK_MSG": "ID de tâche ajouté ==>> {{id}}",
+        "UPDATE_TASK_MSG": "Identifiant de tâche mis à jour==>> {{id}}",
+        "DELTE_TASK_MSG": "ID de tâche supprimé ==>>{{id}}",
+        "END_TASK_MSG": " ID de Tâche finale  ==>>{{id}}",
+        "CONFIRMTITLE": "Êtes-vous sûr ?",
+        "ADD_TASK": "Ajouter une tâche",
+        "PARENT_TASK": "Tâche parent",
+        "NAME": "Name",
+        "PROJECT_NAME": "Nom de la tâche",
+        "EDIT_TASK": "tâche d'édition",
+        "DELETE_TASK": "supprimer la tâche",
+        "TASK_USER": "Utilisateur de la tâche",
+        "STARTDATE": "Date de début",
+        "ENDDATE": "Date de fin",
+        "PRIORITY": "Priorité"
+    },
+    "ADD_EDIT_TASK_PG": {
+        "TITLE": "{{value}} Tâche",
+        "TASK_INFO": "Informations sur la tâche",
+        "PROJECT": "projet",
+        "TASK_NAME": "Nom de la tâche",
+        "REVIEW": "Informations sur la tâche de révision",
+        "TASK_USER": "Utilisateur de la tâche",
+        "STARTDATE": "Date de début",
+        "ENDDATE": "Date de fin",
+        "PRIORITY": "Priorité",
+        "SAVE": "sauvegarder",
+        "ISPARENT": "Est-ce que la tâche parent?"
+    }
+}

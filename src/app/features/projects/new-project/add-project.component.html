@@ -1,0 +1,80 @@
+<div class="main-div">
+    <mat-card class="z-depth center" flex="90">
+
+        <mat-toolbar color="primary" layout="fill">
+            {{ title }}
+        </mat-toolbar>
+
+        <div class="basic-container mat-elevation-z8">
+            <mat-horizontal-stepper [linear]="true" #stepper>
+
+                <!-- Personal Form for Step 1 -->
+                <mat-step [stepControl]="projectForm">
+                    <ng-template matStepLabel> {{'ADDEDITPROJECTPG.PROJECTINFO' | translate}}</ng-template>
+                    <!-- <app-personal-form [form]="personalForm"></app-personal-form> -->
+
+                    <form [formGroup]="projectForm">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="{{'ADDEDITPROJECTPG.PROJECTNAME' | translate}}"
+                                formControlName="projectName" required>
+                        </mat-form-field>
+
+                        <mat-checkbox (change)='onChange($event)' formControlName='isSetDate' color='primary'>
+                            {{'ADDEDITPROJECTPG.ISDATE' | translate}}</mat-checkbox>
+
+                        <mat-form-field class="">
+                            <input formControlName="startDate" [readOnly]="isDisabled" matInput [matDatepicker]="picker"
+                                [min]="minDate" [max]="maxDate"
+                                placeholder="{{'ADDEDITPROJECTPG.STARTDATE' | translate}}">
+                            <mat-datepicker-toggle matSuffix [for]="picker" [disabled]="isDisabled">
+                            </mat-datepicker-toggle>
+                            <mat-datepicker [startAt]="minDate" startView="year" #picker></mat-datepicker>
+                        </mat-form-field>
+
+                        <mat-form-field class="">
+                            <input formControlName="endDate" [readOnly]="isDisabled" matInput [matDatepicker]="picker2"
+                                [min]="endDate" [max]="maxDate"
+                                placeholder="{{'ADDEDITPROJECTPG.ENDDATE' | translate}}">
+                            <mat-datepicker-toggle matSuffix [for]="picker2" [disabled]="isDisabled">
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #picker2 startView="year" [startAt]="startDate"></mat-datepicker>
+                        </mat-form-field>
+
+
+                        <div> {{'ADDEDITPROJECTPG.PRIORITY' | translate}}
+                            <mat-slider formControlName="priority" (input)="priority = $event.value" step="1" min="0"
+                                max="5" [value]="priority" thumbLabel=true>
+                            </mat-slider>
+                        </div>
+                        <div>
+                            <mat-form-field>
+                                <input matInput placeholder="{{'ADDEDITPROJECTPG.PROJECTMANAGER' | translate}}"
+                                    [required]="false" readonly [value]="managerfullName"
+                                    formControlName="projectManager">
+                                <mat-icon matSuffix color="primary" (click)="openDataDialog(true)">search</mat-icon>
+                            </mat-form-field>
+
+                        </div>
+                    </form>
+
+                    <div>
+                        <button mat-raised-button matStepperNext type="button" matTooltip="Next Step"
+                            class="btn-primary">{{'STEPPERS.NEXT' | translate}}</button>
+                    </div>
+                </mat-step>
+
+                <!-- Result Form for Step 4 -->
+                <mat-step>
+                    <ng-template matStepLabel>{{'ADDEDITPROJECTPG.REVIEW' | translate}}</ng-template>
+                    <app-project-result-form [formData]="getProject()"></app-project-result-form>
+                    <div class="top-15">
+                        <button mat-raised-button matStepperPrevious>{{'STEPPERS.PREIVIOUS' | translate}}</button>&nbsp;
+                        <button class="btn-success" mat-raised-button cdkFocusInitial
+                            (click)="save()">{{'ADDEDITPROJECTPG.SAVE' | translate}}</button>
+                    </div>
+                </mat-step>
+
+            </mat-horizontal-stepper>
+        </div>
+    </mat-card>
+</div>
