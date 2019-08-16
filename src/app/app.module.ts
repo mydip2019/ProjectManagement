@@ -12,17 +12,18 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MatPaginatorIntl } from '@angular/material';
 import { MatPaginatorI18nService } from './core/custom-mat-paginator-int';
-
+import { HomeComponent } from './features/home/home.component';
 
 
 // AoT requires an exported function for factories
-// export function HttpLoaderFactory(httpClient: HttpClient) {
-//     return new TranslateHttpLoader(httpClient);
-// }
-
-export function createTranslateLoader(http: HttpClient) {
-    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+export function HttpLoaderFactory(httpClient: HttpClient) {
+    return new TranslateHttpLoader(httpClient);
 }
+
+
+// export function createTranslateLoader(http: HttpClient) {
+//     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+// }
 
 export function TRANSLATE(str: string) {
     return str;
@@ -35,10 +36,17 @@ export function TRANSLATE(str: string) {
         AppRoutingModule,
         CoreModule, NgxPaginationModule,
         HttpClientModule,
+        // TranslateModule.forRoot({
+        //     loader: {
+        //         provide: TranslateLoader,
+        //         useFactory: (createTranslateLoader),
+        //         deps: [HttpClient]
+        //     }
+        // })
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
-                useFactory: (createTranslateLoader),
+                useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
             }
         })
@@ -62,7 +70,10 @@ export function TRANSLATE(str: string) {
     ],
     bootstrap: [
         AppComponent
-    ]
+    ],
+    entryComponents: [
+        AppComponent
+    ],
 })
 
 export class AppModule { }

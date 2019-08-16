@@ -11,10 +11,10 @@
 
     <div class="desktop-menu">
         <span class="spacer"></span>
-        <a rel="noopener" mat-button class="menu-item" [routerLink]="['/Home']">Home</a>
-        <a rel="noopener" mat-button class="menu-item" [routerLink]="['/Contacts']">Contacts</a>
-        <a rel="noopener" mat-button class="menu-item" [routerLink]="['/Projects']">Projects</a>
-        <a rel="noopener" mat-button class="menu-item" [routerLink]="['/Task']">Task</a>
+        <a rel="noopener" mat-button class="menu-item" [routerLink]="['/home']">Home</a>
+        <a rel="noopener" mat-button class="menu-item" [routerLink]="['/contacts']">Contacts</a>
+        <a rel="noopener" mat-button class="menu-item" [routerLink]="['/projects']">Projects</a>
+        <a rel="noopener" mat-button class="menu-item" [routerLink]="['/task']">Task</a>
 
         <a *ngFor="let menu_item of menu; let i = index" [href]="[menu_item.url]" rel="noopener" mat-button
             class="menu-item">{{ menu_item.name }}</a>

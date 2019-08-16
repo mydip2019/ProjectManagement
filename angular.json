@@ -43,10 +43,9 @@
                         "tsConfig": "src/tsconfig.app.json",
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets",							 
-							"src/assets/i18n",
+                            "src/assets",
+                            "src/assets/i18n",
                             "src/web.config"
-							
                         ],
                         "styles": [
                             "src/styles/layout/styles.scss",
@@ -54,7 +53,8 @@
                         ],
                         "stylePreprocessorOptions": {
                             "includePaths": [
-                                "src/styles/settings/"
+                                "src/styles/settings/",
+                                "src/sass"
                             ]
                         },
                         "scripts": []
@@ -109,8 +109,8 @@
                         "scripts": [],
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets",							
-							"src/assets/i18n"
+                            "src/assets",
+                            "src/assets/i18n"
                         ]
                     }
                 },

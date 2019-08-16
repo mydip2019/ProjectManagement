@@ -1,7 +1,9 @@
 // @import "./../../../styles/settings/breakpoints.scss";
 // @import "./../../../styles/settings/colors.scss";
-@import "breakpoints";
-@import "custom-colors";
+ 
+@import "../../../styles/settings/breakpoints.scss";
+@import "../../../styles/settings/custom-colors.scss";
+ 
 
 :host {
     z-index: 1;

@@ -13,7 +13,6 @@ export class AppComponent {
   menu: Array<Object> = [
     // { name: 'Home', url: '' },
     // { name: 'Contacts', url: 'Contacts' },
-
     // { name: 'Settings', url: '' },
     { name: 'About me', url: '' }
   ];

@@ -1,10 +1,13 @@
 // @import "./../../../styles/settings/breakpoints.scss";
 // @import "./../../../styles/settings/layout.scss";
 // @import "./../../../styles/settings/custom-colors.scss";
-@import "breakpoints";          
-@import "layout";
-@import "custom-colors";
+// @import "breakpoints";          
+// @import "layout";
+// @import "custom-colors";
 
+@import "../../../styles/settings/breakpoints.scss";
+@import "../../../styles/settings/layout.scss";
+@import "../../../styles/settings/custom-colors.scss";
 .main-content {
     padding: {
         top: 0;

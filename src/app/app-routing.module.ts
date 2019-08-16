@@ -2,26 +2,26 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
 
     {                                          // removed square bracket
         path: '',
-        loadChildren: './features/home/home.module#HomeModule'
+        loadChildren: './features/home/home.module#HomeModule',
     }, {
-        path: 'Home',
+        path: 'home',
         loadChildren: './features/home/home.module#HomeModule'
     },
     {
-        path: 'Contacts',
+        path: 'contacts',
         loadChildren: './features/contacts/contacts.module#ContactsModule'
     },
     {
-        path: 'Projects',
+        path: 'projects',
         loadChildren: './features/projects/projects.module#ProjectsModule'
     }
     ,
     {
-        path: 'Task',
+        path: 'task',
         loadChildren: './features/tasks/tasks.module#TasksModule'
     }
 
@@ -46,5 +46,6 @@ const appRoutes: Routes = [
     exports: [RouterModule],
     providers: []
 })
+
 
 export class AppRoutingModule { }
